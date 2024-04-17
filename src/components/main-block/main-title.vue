@@ -37,8 +37,8 @@ const info = () => {
 
 <template>
   <h1 class="main-title">
-    <p>{{mainTitle.text}}</p>
-    <p v-if="mainTitle.profit">
+    <span>{{mainTitle.text}}</span>
+    <span v-if="mainTitle.profit">
       до&nbsp;{{mainTitle.profit.toLocaleString('ru-RU')}}&nbsp;₽
       <span
           class="main-title__info"
@@ -47,9 +47,10 @@ const info = () => {
       >
         <InfoCircleOutlined />
       </span>
-    </p>
-    <p v-if="props.month">в&nbsp;{{currentMonth}}</p>
+    </span>
+    <span v-if="props.month">в&nbsp;{{currentMonth}}</span>
   </h1>
+  <h2 class="main-title__description">{{mainTitle.description}}</h2>
 </template>
 
 <style scoped>
@@ -64,29 +65,38 @@ const info = () => {
     transition: all 700ms ease, opacity 500ms ease;
   }
 
-  .main-title p {
+  .main-title span {
     position: relative;
     display: inline-block;
-    line-height: 1;
   }
 
-  .main-title p:not(:last-child) {
+  .main-title span:not(:last-child) {
     margin: 0 7px 0 0;
   }
 
   .main-title__info {
-    position: absolute;
-    top: -5px;
-    right: -10px;
-    display: flex;
+    position: absolute !important;
+    top: -12px;
+    right: -12px;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     width: 17px;
     height: 17px;
     cursor: pointer;
+    line-height: 0 !important;
   }
 
   .main-title__info svg {
 
+  }
+
+  .main-title__description {
+    text-align: center;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 1.25;
+    color: #000;
+    transition: all 700ms ease, opacity 500ms ease;
   }
 </style>
