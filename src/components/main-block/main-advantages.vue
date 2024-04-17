@@ -5,8 +5,6 @@ import {advantages} from "@/consts.js";
 
 
 
-
-
 </script>
 
 <template>

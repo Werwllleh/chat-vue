@@ -39,7 +39,7 @@ const info = () => {
   <h1 class="main-title">
     <span>{{mainTitle.text}}</span>
     <span v-if="mainTitle.profit">
-      до&nbsp;{{mainTitle.profit.toLocaleString('ru-RU')}}&nbsp;₽
+      до&nbsp;{{Number(mainTitle.profit).toLocaleString('ru-RU')}}&nbsp;₽
       <span
           class="main-title__info"
           v-if="mainTitle.infoModal.status"

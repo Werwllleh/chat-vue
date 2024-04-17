@@ -5,3 +5,27 @@
   max-width: 810px;
   margin: 0 auto;
 }
+
+.main-modal .ant-modal-content {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+}
+
+.main-modal .ant-modal-footer {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+.main-modal .ant-modal-close {
+
+}
+
+.main-modal .ant-modal-close svg {
+  fill: #ffffff;
+}
+
+.message + .message .bot-avatar {
+  display: none;
+}

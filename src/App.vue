@@ -11,7 +11,7 @@ import MainBlock from "@/components/main-block/main-block.vue";
 <template>
   <bg :bgImage="BgImg" />
   <chat-header :logo="logo"/>
-  <main-block></main-block>
+  <main-block />
 </template>
 
 <style>

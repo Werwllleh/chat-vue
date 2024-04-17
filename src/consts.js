@@ -56,3 +56,67 @@ export const advantages = {
     }
   ]
 };
+
+export const botInfo = {
+  name: 'Ольга',
+  description: 'Онлайн-консультант автосалона Чери Центр ЭМ Восток на Владимировской',
+  text: '<p>Здравствуйте!</p><p>Напишите свой номер, и я расскажу обо всех спецпредложениях на а/м Чери Центр ЭМ Восток на Владимировской</p>'
+}
+
+export const botMessages = [
+  {
+    step: 1,
+    messages: [
+      'Здравствуйте!<br>Меня зовут Ольга. Я онлайн-консультант официального автосалона CHERY',
+      'Пожалуйста, ответьте на пару вопросов - я составлю для вас предложение с вариантами комплектации и стоимостью.',
+      'Какую модель автомобиля вы рассматриваете?'
+    ],
+    materials: false
+  },
+  {
+    step: 2,
+    messages: [
+      'Выберите автомобиль из списка выше'
+    ],
+    materials: `cars`
+  },
+]
+
+export const cars = [
+  {
+    brand: 'Chery',
+    model: 'Tiggo 4 Pro 18 years edition',
+    profit: '615000',
+    image: 'tiggo4pro.png'
+  },
+  {
+    brand: 'Chery',
+    model: 'ARRIZO 8',
+    profit: '990000',
+    image: 'arrizo.png'
+  },
+  {
+    brand: 'Chery',
+    model: 'Tiggo 7 Pro Max',
+    profit: '707150',
+    image: 'Tiggo7PROmax.png'
+  },
+  {
+    brand: 'Chery',
+    model: 'Tiggo 7 Pro Max AWD',
+    profit: '793000',
+    image: '7proMax.png'
+  },
+  {
+    brand: 'Chery',
+    model: 'Tiggo 8 New',
+    profit: '620500',
+    image: 'Tiggo8NEW.png'
+  },
+  {
+    brand: 'Chery',
+    model: 'Tiggo 8 Pro Max',
+    profit: '1088100',
+    image: 'tiggo8awd.png'
+  },
+]

@@ -1,6 +1,8 @@
 <script setup>
 
 import MainAdvantages from "@/components/main-block/main-advantages.vue";
+import Message from "@/components/messages/message.vue";
+import {botMessages} from "@/consts.js";
 
 
 </script>
@@ -8,7 +10,9 @@ import MainAdvantages from "@/components/main-block/main-advantages.vue";
 <template>
   <div class="chat">
     <main-advantages />
-    <div class="chat__messages"></div>
+    <div class="chat__messages">
+      <message v-for="item in botMessages" :materials="item.materials" :messages="item.messages" />
+    </div>
   </div>
 </template>
 
@@ -22,8 +26,11 @@ import MainAdvantages from "@/components/main-block/main-advantages.vue";
 }
 
 .chat__messages {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   background-color: #ffffff;
-  padding: 25px 30px 100px;
+  padding: 40px 30px 100px;
 }
 
 </style>

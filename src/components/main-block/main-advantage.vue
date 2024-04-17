@@ -3,6 +3,8 @@
 import { ref } from 'vue';
 import { Modal } from 'ant-design-vue';
 
+import AdvantagesModal from "@/components/modals/advantages-modal.vue";
+
 const open = ref(false);
 
 const showModal = () => {
@@ -10,14 +12,10 @@ const showModal = () => {
 };
 
 const handleOk = e => {
-  console.log(e);
   open.value = false;
 };
 
-const props = defineProps(['icon, text, textColor']);
-
-console.log(props)
-
+const props = defineProps(['icon', 'text', 'textColor']);
 
 
 </script>
@@ -29,8 +27,8 @@ console.log(props)
     </div>
     <p :style="{color: props.textColor}" class="advantages__item-text" v-html="props.text" />
   </div>
-  <Modal v-model:visible="open" :title="props.text" @ok="handleOk">
-    {{props.text}}
+  <Modal class="main-modal main-modal-advantages" v-model:visible="open" centered @ok="handleOk">
+    <advantages-modal :style="{fontFamily: 'Montserrat, sans-serif'}" />
   </Modal>
 </template>
 
