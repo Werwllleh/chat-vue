@@ -16,21 +16,12 @@ const currentMonth = months[currentDate.getMonth()];
 
 const open = ref(false);
 
-const info = () => {
-  Modal.info({
-    title: mainTitle.infoModal.title,
-    content: mainTitle.infoModal.text,
-    cancelButtonProps: { // Убираем кнопку "Отмена"
-      show: false,
-    },
-    closable: true,
-    onCancel() {
-      open.value = false;
-    },
-    onOk() {
-      open.value = false; // Закрываем модальное окно при клике на кнопку "OK"
-    },
-  });
+const showModal = () => {
+  open.value = true;
+};
+
+const handleOk = e => {
+  open.value = false;
 };
 
 </script>
@@ -43,7 +34,7 @@ const info = () => {
       <span
           class="main-title__info"
           v-if="mainTitle.infoModal.status"
-          @click="info"
+          @click="showModal"
       >
         <InfoCircleOutlined />
       </span>
@@ -51,6 +42,9 @@ const info = () => {
     <span v-if="props.month">в&nbsp;{{currentMonth}}</span>
   </h1>
   <h2 class="main-title__description">{{mainTitle.description}}</h2>
+  <Modal class="main-modal title-modal" v-model:open="open" centered >
+    {{mainTitle.infoModal.text}}
+  </Modal>
 </template>
 
 <style scoped>
@@ -99,4 +93,5 @@ const info = () => {
     color: #000;
     transition: all 700ms ease, opacity 500ms ease;
   }
+
 </style>

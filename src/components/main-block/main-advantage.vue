@@ -27,7 +27,7 @@ const props = defineProps(['icon', 'text', 'textColor']);
     </div>
     <p :style="{color: props.textColor}" class="advantages__item-text" v-html="props.text" />
   </div>
-  <Modal class="main-modal main-modal-advantages" v-model:visible="open" centered @ok="handleOk">
+  <Modal class="main-modal main-modal-advantages" v-model:open="open" centered @ok="handleOk">
     <advantages-modal :style="{fontFamily: 'Montserrat, sans-serif'}" />
   </Modal>
 </template>

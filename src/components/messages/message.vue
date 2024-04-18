@@ -2,6 +2,8 @@
 
 import BotAvatar from "@/components/bot-avatar.vue";
 import cars from "@/components/materials/cars.vue";
+import CheckList from "@/components/check-lists/check-list.vue";
+import {carsOptions} from "@/consts.js";
 
 const props = defineProps(['messages', 'materials'])
 
@@ -14,7 +16,8 @@ const props = defineProps(['messages', 'materials'])
     </div>
     <div class="message__texts">
       <div v-if="props.materials" class="message__materials" >
-        <cars />
+<!--        <cars />-->
+        <check-list :options="carsOptions" />
       </div>
       <div :key="index" v-for="(message, index) in props.messages" class="message__text">
         <p v-html="message" />

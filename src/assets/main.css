@@ -6,6 +6,10 @@
   margin: 0 auto;
 }
 
+.main-modal {
+  padding: 0;
+}
+
 .main-modal .ant-modal-content {
   box-shadow: none !important;
   border-radius: 0 !important;
@@ -28,4 +32,37 @@
 
 .message + .message .bot-avatar {
   display: none;
+}
+
+.title-modal {
+  position: relative;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.title-modal .ant-modal-body {
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: normal;
+  color: #5a6060;
+  padding: 30px;
+  text-align: justify;
+}
+
+.title-modal .ant-modal-close {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+
+.title-modal .ant-modal-close svg {
+  fill: #5a6060;
+}
+
+.check-item span {
+  font-family: "Montserrat", sans-serif;
+}
+
+.check-item .ant-checkbox-checked:after {
+
 }
